@@ -5,6 +5,7 @@
 #include "wrappers/stdio_wrappers.h"
 #include "wrappers/stdlib_wrappers.h"
 #include "wrappers/unistd_wrappers.h"
+#include "wrappers/sys_stat_wrappers.h"
 
 typedef struct interceptr_t {
     struct wrapper {
@@ -85,6 +86,25 @@ typedef struct interceptr_t {
             interceptr_wrapper_ferror_t ferror;
             interceptr_wrapper_perror_t perror;
         } stdio;
+
+        struct sys_stat {
+            interceptr_wrapper_stat_t stat;
+            interceptr_wrapper_fstat_t fstat;
+            interceptr_wrapper_fstatat_t fstatat;
+            interceptr_wrapper_lstat_t lstat;
+            interceptr_wrapper_chmod_t chmod;
+            interceptr_wrapper_fchmod_t fchmod;
+            interceptr_wrapper_fchmodat_t fchmodat;
+            interceptr_wrapper_mkdir_t mkdir;
+            interceptr_wrapper_mkdirat_t mkdirat;
+            interceptr_wrapper_mknod_t mknod;
+            interceptr_wrapper_mknodat_t mknodat;
+            interceptr_wrapper_mkfifo_t mkfifo;
+            interceptr_wrapper_mkfifoat_t mkfifoat;
+            interceptr_wrapper_utimensat_t utimensat;
+            interceptr_wrapper_futimens_t futimens;
+            interceptr_wrapper_umask_t umask;
+        } sys_stat;
 
     } wrapper;
 

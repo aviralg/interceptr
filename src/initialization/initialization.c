@@ -3,6 +3,7 @@
 #include "initialization/stdio_wrappers.h"
 #include "initialization/stdlib_wrappers.h"
 #include "initialization/unistd_wrappers.h"
+#include "initialization/sys_stat_wrappers.h"
 
 static int interceptr_wrappers_initialized = 0;
 
@@ -14,6 +15,7 @@ void interceptr_initialize_wrappers() {
     initialize_stdio_wrappers();
     initialize_stdlib_wrappers();
     initialize_unistd_wrappers();
+    initialize_sys_stat_wrappers();
     interceptr_wrappers_initialized = 1;
 }
 
