@@ -28,12 +28,11 @@ $(BUILDDIR)/lib/$(LIBRARY): $(SOURCES) $(INCLUDES)
 	$(MKDIR) $(BUILDDIR)/lib
 	$(GCC) -fPIC -shared -DGIT_COMMIT_INFO='"$(GIT_COMMIT_INFO)"' -I$(INCLUDEDIR) -ldl $(SOURCES) -o $@
 
-$(BUILDDIR)/include/interceptr.h: $(SOURCES) $(INCLUDES)
-	$(MKDIR) $(BUILDDIR)/include
-	$(CP) include/interceptr.h $(BUILDDIR)/include/
-	$(CP) -r include/wrappers $(BUILDDIR)/include/
+$(BUILDDIR)/include: $(SOURCES) $(INCLUDES)
+	$(MKDIR) $(BUILDDIR)
+	$(CP) -r include $(BUILDDIR)/
 
-build: $(BUILDDIR)/lib/$(LIBRARY) $(BUILDDIR)/include/interceptr.h
+build: $(BUILDDIR)/lib/$(LIBRARY) $(BUILDDIR)/include
 
 clean:
 	$(RM) $(BUILDDIR)
