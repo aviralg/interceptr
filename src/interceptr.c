@@ -1,4 +1,5 @@
 #include "interceptr.h"
+
 #include "definition.h"
 
 static struct interceptr_t* interceptr_active_interceptr = NULL;
@@ -11,8 +12,7 @@ struct interceptr_t* interceptr_create_interceptr() {
 }
 
 #undef interceptr_destroy_interceptr
-struct interceptr_t*
-interceptr_destroy_interceptr(struct interceptr_t* interceptr) {
+void interceptr_destroy_interceptr(struct interceptr_t* interceptr) {
     free(interceptr);
 }
 
@@ -60,4 +60,3 @@ void interceptr_set_active_wrapper(const char* wrapper_name) {
 void interceptr_unset_active_wrapper() {
     interceptr_active_wrapper = NULL;
 }
-

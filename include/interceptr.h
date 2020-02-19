@@ -8,13 +8,13 @@ struct interceptr_t* interceptr_create_interceptr() __attribute__((weak));
 #define interceptr_create_interceptr() \
     (interceptr_create_interceptr ? interceptr_create_interceptr() : NULL)
 
-struct interceptr_t*
-interceptr_destroy_interceptr(struct interceptr_t* interceptr)
+void interceptr_destroy_interceptr(struct interceptr_t* interceptr)
     __attribute__((weak));
 
-#define interceptr_destroy_interceptr(interceptr)                              \
-    (interceptr_destroy_interceptr ? interceptr_destroy_interceptr(interceptr) \
-                                   : NULL)
+#define interceptr_destroy_interceptr(interceptr)  \
+    if (interceptr_destroy_interceptr) {           \
+        interceptr_destroy_interceptr(interceptr); \
+    }
 
 struct interceptr_t* interceptr_set_state_(struct interceptr_t* interceptr,
                                            void* state) __attribute__((weak));
