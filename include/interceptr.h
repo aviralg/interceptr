@@ -33,6 +33,8 @@ void* interceptr_get_interceptr_state(struct interceptr_t* interceptr)
          ? interceptr_get_interceptr_state(interceptr) \
          : NULL)
 
+#include "library/interface.h"
+
 void interceptr_set_interceptr(struct interceptr_t* interceptr)
     __attribute__((weak));
 
