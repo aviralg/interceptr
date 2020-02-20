@@ -16,6 +16,18 @@ void interceptr_destroy_interceptr(struct interceptr_t* interceptr) {
     free(interceptr);
 }
 
+#undef interceptr_set_interceptr_state
+struct interceptr_t*
+interceptr_set_interceptr_state(struct interceptr_t* interceptr, void* state) {
+    interceptr->state = state;
+    return interceptr;
+}
+
+#undef interceptr_get_interceptr_state
+void* interceptr_get_interceptr_state(struct interceptr_t* interceptr) {
+    return interceptr->state;
+}
+
 #undef interceptr_get_interceptr
 struct interceptr_t* interceptr_get_interceptr() {
     return interceptr_active_interceptr;

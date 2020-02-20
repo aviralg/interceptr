@@ -16,17 +16,22 @@ void interceptr_destroy_interceptr(struct interceptr_t* interceptr)
         interceptr_destroy_interceptr(interceptr); \
     }
 
-struct interceptr_t* interceptr_set_state_(struct interceptr_t* interceptr,
-                                           void* state) __attribute__((weak));
-
-#define interceptr_set_state(interceptr, state) \
-    (interceptr_set_state ? interceptr_set_state(interceptr, state) : NULL)
-
-struct interceptr_t* interceptr_get_state_(struct interceptr_t* interceptr)
+struct interceptr_t*
+interceptr_set_interceptr_state(struct interceptr_t* interceptr, void* state)
     __attribute__((weak));
 
-#define interceptr_get_state(interceptr) \
-    (interceptr_get_state ? interceptr_get_state(interceptr) : NULL)
+#define interceptr_set_interceptr_state(interceptr, state)    \
+    (interceptr_set_interceptr_state                          \
+         ? interceptr_set_interceptr_state(interceptr, state) \
+         : NULL)
+
+void* interceptr_get_interceptr_state(struct interceptr_t* interceptr)
+    __attribute__((weak));
+
+#define interceptr_get_interceptr_state(interceptr)    \
+    (interceptr_get_interceptr_state                   \
+         ? interceptr_get_interceptr_state(interceptr) \
+         : NULL)
 
 void interceptr_set_interceptr(struct interceptr_t* interceptr)
     __attribute__((weak));
