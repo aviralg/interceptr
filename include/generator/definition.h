@@ -23,17 +23,18 @@
 
 #define GENERATE_WRAPPER_BODY(libname, funname, type, ...)            \
     interceptr_initialize_wrappers();                                 \
+    type val;                                                         \
     struct interceptr_t* interceptr = interceptr_get_interceptr();    \
     if (interceptr_is_enabled() && !interceptr_wrapper_is_active() && \
         interceptr && interceptr->definition.libname.funname) {       \
         interceptr_set_active_wrapper(#funname);                      \
-        type val = interceptr->definition.libname.funname(            \
+        val = interceptr->definition.libname.funname(                 \
             interceptr, real_##funname, ##__VA_ARGS__);               \
         interceptr_unset_active_wrapper();                            \
-        return val;                                                   \
     } else {                                                          \
-        return real_##funname(__VA_ARGS__);                           \
-    }
+        val = real_##funname(__VA_ARGS__);                            \
+    }                                                                 \
+    return val;
 
 #define GENERATE_WRAPPER_BODY_VOID(libname, funname, ...)             \
     interceptr_initialize_wrappers();                                 \
@@ -45,24 +46,26 @@
             interceptr, real_##funname, ##__VA_ARGS__);               \
         interceptr_unset_active_wrapper();                            \
     } else {                                                          \
-        return real_##funname(__VA_ARGS__);                           \
-    }
+        real_##funname(__VA_ARGS__);                                  \
+    }                                                                 \
+    return;
 
 #define GENERATE_WRAPPER_BODY_VARARG(libname, funname, type, last, ...) \
     interceptr_initialize_wrappers();                                   \
     struct interceptr_t* interceptr = interceptr_get_interceptr();      \
+    type val;                                                           \
+    va_list varargs;                                                    \
+    va_start(varargs, last);                                            \
     if (interceptr_is_enabled() && !interceptr_wrapper_is_active() &&   \
         interceptr && interceptr->definition.libname.funname) {         \
         interceptr_set_active_wrapper(#funname);                        \
-        va_list varargs;                                                \
-        va_start(varargs, last);                                        \
-        type val = interceptr->definition.libname.funname(              \
+        val = interceptr->definition.libname.funname(                   \
             interceptr, real_v##funname, ##__VA_ARGS__, varargs);       \
-        va_end(varargs);                                                \
         interceptr_unset_active_wrapper();                              \
-        return val;                                                     \
     } else {                                                            \
-        return real_##funname(__VA_ARGS__);                             \
-    }
+        val = real_v##funname(__VA_ARGS__, varargs);                    \
+    }                                                                   \
+    va_end(varargs);                                                    \
+    return val;
 
 #endif /* INTERCEPTR_GENERATOR_DEFINITION_H */
