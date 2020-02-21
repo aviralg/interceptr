@@ -41,6 +41,26 @@ typedef int (*interceptr_wrapper_fstat_t)(struct interceptr_t* interceptr,
                                           int fd,
                                           struct stat* buf);
 
+typedef int (*interceptr___fxstat_t)(int version, int fd, struct stat* buf);
+typedef int (*interceptr_wrapper___fxstat_t)(struct interceptr_t* interceptr,
+                                             interceptr___fxstat_t callback,
+                                             int version,
+                                             int fd,
+                                             struct stat* buf);
+
+typedef int (*interceptr_fstat64_t)(int fd, struct stat64* buf);
+typedef int (*interceptr_wrapper_fstat64_t)(struct interceptr_t* interceptr,
+                                            interceptr_fstat64_t callback,
+                                            int fd,
+                                            struct stat64* buf);
+
+typedef int (*interceptr___fxstat64_t)(int version, int fd, struct stat64* buf);
+typedef int (*interceptr_wrapper___fxstat64_t)(struct interceptr_t* interceptr,
+                                               interceptr___fxstat64_t callback,
+                                               int version,
+                                               int fd,
+                                               struct stat64* buf);
+
 typedef int (*interceptr_fstatat_t)(int dirfd,
                                     const char* pathname,
                                     struct stat* buf,
@@ -153,7 +173,15 @@ typedef mode_t (*interceptr_wrapper_umask_t)(struct interceptr_t* interceptr,
 
 typedef struct sys_stat_t {
     interceptr_wrapper_stat_t stat;
+    interceptr_wrapper___xstat_t __xstat;
+    interceptr_wrapper_stat64_t stat64;
+    interceptr_wrapper___xstat64_t __xstat64;
+
     interceptr_wrapper_fstat_t fstat;
+    interceptr_wrapper___fxstat_t __fxstat;
+    interceptr_wrapper_fstat64_t fstat64;
+    interceptr_wrapper___fxstat64_t __fxstat64;
+
     interceptr_wrapper_fstatat_t fstatat;
     interceptr_wrapper_lstat_t lstat;
     interceptr_wrapper_chmod_t chmod;

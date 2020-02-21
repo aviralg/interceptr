@@ -10,6 +10,10 @@ static interceptr_stat64_t real_stat64 = NULL;
 static interceptr___xstat64_t real___xstat64 = NULL;
 
 static interceptr_fstat_t real_fstat = NULL;
+static interceptr___fxstat_t real___fxstat = NULL;
+static interceptr_fstat64_t real_fstat64 = NULL;
+static interceptr___fxstat64_t real___fxstat64 = NULL;
+
 static interceptr_fstatat_t real_fstatat = NULL;
 static interceptr_lstat_t real_lstat = NULL;
 static interceptr_chmod_t real_chmod = NULL;
@@ -32,6 +36,10 @@ void initialize_sys_stat_wrappers() {
     real___xstat64 = DLSYM_NEXT_FUNCTION(__xstat64);
 
     real_fstat = DLSYM_NEXT_FUNCTION(fstat);
+    real___fxstat = DLSYM_NEXT_FUNCTION(__fxstat);
+    real_fstat64 = DLSYM_NEXT_FUNCTION(fstat64);
+    real___fxstat64 = DLSYM_NEXT_FUNCTION(__fxstat64);
+
     real_fstatat = DLSYM_NEXT_FUNCTION(fstatat);
     real_lstat = DLSYM_NEXT_FUNCTION(lstat);
     real_chmod = DLSYM_NEXT_FUNCTION(chmod);
@@ -66,6 +74,18 @@ int __xstat64(int version, const char* path, struct stat64* buf) {
 
 int fstat(int fd, struct stat* buf) {
     GENERATE_WRAPPER_BODY(sys_stat, fstat, int, fd, buf);
+}
+
+int __fxstat(int version, int fd, struct stat* buf) {
+    GENERATE_WRAPPER_BODY(sys_stat, __fxstat, int, version, fd, buf);
+}
+
+int fstat64(int fd, struct stat64* buf) {
+    GENERATE_WRAPPER_BODY(sys_stat, fstat64, int, fd, buf);
+}
+
+int __fxstat64(int version, int fd, struct stat64* buf) {
+    GENERATE_WRAPPER_BODY(sys_stat, __fxstat64, int, version, fd, buf);
 }
 
 int fstatat(int dirfd, const char* pathname, struct stat* buf, int flags) {

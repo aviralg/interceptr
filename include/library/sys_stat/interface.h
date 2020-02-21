@@ -65,6 +65,43 @@ INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, fstat)
 
 /******************************************************************************/
 
+INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, __fxstat)
+#define interceptr_get_wrapper_sys_stat___fxstat(interceptr) \
+    INTERCEPTR_GENERATE_WRAPPER_GETTER_MACRO_DEFINITION(     \
+        sys_stat, __fxstat, interceptr)
+
+INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, __fxstat)
+#define interceptr_set_wrapper_sys_stat___fxstat(interceptr, __fxstat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                       \
+        sys_stat, __fxstat, interceptr, __fxstat_wrapper)
+
+/******************************************************************************/
+
+INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, fstat64)
+#define interceptr_get_wrapper_sys_stat_fstat64(interceptr) \
+    INTERCEPTR_GENERATE_WRAPPER_GETTER_MACRO_DEFINITION(    \
+        sys_stat, fstat64, interceptr)
+
+INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, fstat64)
+#define interceptr_set_wrapper_sys_stat_fstat64(interceptr, fstat64_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                     \
+        sys_stat, fstat64, interceptr, fstat64_wrapper)
+
+/******************************************************************************/
+
+INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, __fxstat64)
+#define interceptr_get_wrapper_sys_stat___fxstat64(interceptr) \
+    INTERCEPTR_GENERATE_WRAPPER_GETTER_MACRO_DEFINITION(       \
+        sys_stat, __fxstat64, interceptr)
+
+INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, __fxstat64)
+#define interceptr_set_wrapper_sys_stat___fxstat64(interceptr,         \
+                                                   __fxstat64_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(               \
+        sys_stat, __fxstat64, interceptr, __fxstat64_wrapper)
+
+/******************************************************************************/
+
 INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, fstatat)
 #define interceptr_get_wrapper_sys_stat_fstatat(interceptr) \
     INTERCEPTR_GENERATE_WRAPPER_GETTER_MACRO_DEFINITION(    \
