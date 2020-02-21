@@ -11,11 +11,11 @@ typedef int (*interceptr_wrapper_remove_t)(struct interceptr_t* interceptr,
                                            interceptr_remove_t callback,
                                            const char* filename);
 
-typedef int (*interceptr_rename_t)(const char* old, const char* new);
+typedef int (*interceptr_rename_t)(const char* old, const char* new_name);
 typedef int (*interceptr_wrapper_rename_t)(struct interceptr_t* interceptr,
                                            interceptr_rename_t callback,
                                            const char* old,
-                                           const char* new);
+                                           const char* new_name);
 
 typedef FILE* (*interceptr_tmpfile_t)();
 typedef FILE* (*interceptr_wrapper_tmpfile_t)(struct interceptr_t* interceptr,
