@@ -11,6 +11,30 @@ typedef int (*interceptr_wrapper_stat_t)(struct interceptr_t* interceptr,
                                          const char* path,
                                          struct stat* buf);
 
+typedef int (*interceptr___xstat_t)(int version,
+                                    const char* path,
+                                    struct stat* buf);
+typedef int (*interceptr_wrapper___xstat_t)(struct interceptr_t* interceptr,
+                                            interceptr___xstat_t callback,
+                                            int version,
+                                            const char* path,
+                                            struct stat* buf);
+
+typedef int (*interceptr_stat64_t)(const char* path, struct stat64* buf);
+typedef int (*interceptr_wrapper_stat64_t)(struct interceptr_t* interceptr,
+                                           interceptr_stat64_t callback,
+                                           const char* path,
+                                           struct stat64* buf);
+
+typedef int (*interceptr___xstat64_t)(int version,
+                                      const char* path,
+                                      struct stat64* buf);
+typedef int (*interceptr_wrapper___xstat64_t)(struct interceptr_t* interceptr,
+                                              interceptr___xstat64_t callback,
+                                              int version,
+                                              const char* path,
+                                              struct stat64* buf);
+
 typedef int (*interceptr_fstat_t)(int fd, struct stat* buf);
 typedef int (*interceptr_wrapper_fstat_t)(struct interceptr_t* interceptr,
                                           interceptr_fstat_t callback,

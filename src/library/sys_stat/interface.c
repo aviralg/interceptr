@@ -9,6 +9,30 @@ INTERCEPTR_GENERATE_WRAPPER_SETTER_DEFINITION(sys_stat, stat)
 
 /******************************************************************************/
 
+#undef interceptr_get_wrapper_sys_stat___xstat
+INTERCEPTR_GENERATE_WRAPPER_GETTER_DEFINITION(sys_stat, __xstat)
+
+#undef interceptr_set_wrapper_sys_stat___xstat
+INTERCEPTR_GENERATE_WRAPPER_SETTER_DEFINITION(sys_stat, __xstat)
+
+/******************************************************************************/
+
+#undef interceptr_get_wrapper_sys_stat_stat64
+INTERCEPTR_GENERATE_WRAPPER_GETTER_DEFINITION(sys_stat, stat64)
+
+#undef interceptr_set_wrapper_sys_stat_stat64
+INTERCEPTR_GENERATE_WRAPPER_SETTER_DEFINITION(sys_stat, stat64)
+
+/******************************************************************************/
+
+#undef interceptr_get_wrapper_sys_stat___xstat64
+INTERCEPTR_GENERATE_WRAPPER_GETTER_DEFINITION(sys_stat, __xstat64)
+
+#undef interceptr_set_wrapper_sys_stat___xstat64
+INTERCEPTR_GENERATE_WRAPPER_SETTER_DEFINITION(sys_stat, __xstat64)
+
+/******************************************************************************/
+
 #undef interceptr_get_wrapper_sys_stat_fstat
 INTERCEPTR_GENERATE_WRAPPER_GETTER_DEFINITION(sys_stat, fstat)
 

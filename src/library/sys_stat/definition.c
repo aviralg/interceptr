@@ -5,6 +5,10 @@
 #include "library/sys_stat/definition.h"
 
 static interceptr_stat_t real_stat = NULL;
+static interceptr___xstat_t real___xstat = NULL;
+static interceptr_stat64_t real_stat64 = NULL;
+static interceptr___xstat64_t real___xstat64 = NULL;
+
 static interceptr_fstat_t real_fstat = NULL;
 static interceptr_fstatat_t real_fstatat = NULL;
 static interceptr_lstat_t real_lstat = NULL;
@@ -23,6 +27,10 @@ static interceptr_umask_t real_umask = NULL;
 
 void initialize_sys_stat_wrappers() {
     real_stat = DLSYM_NEXT_FUNCTION(stat);
+    real___xstat = DLSYM_NEXT_FUNCTION(__xstat);
+    real_stat64 = DLSYM_NEXT_FUNCTION(stat64);
+    real___xstat64 = DLSYM_NEXT_FUNCTION(__xstat64);
+
     real_fstat = DLSYM_NEXT_FUNCTION(fstat);
     real_fstatat = DLSYM_NEXT_FUNCTION(fstatat);
     real_lstat = DLSYM_NEXT_FUNCTION(lstat);
@@ -42,6 +50,18 @@ void initialize_sys_stat_wrappers() {
 
 int stat(const char* path, struct stat* buf) {
     GENERATE_WRAPPER_BODY(sys_stat, stat, int, path, buf);
+}
+
+int __xstat(int version, const char* path, struct stat* buf) {
+    GENERATE_WRAPPER_BODY(sys_stat, __xstat, int, version, path, buf);
+}
+
+int stat64(const char* path, struct stat64* buf) {
+    GENERATE_WRAPPER_BODY(sys_stat, stat64, int, path, buf);
+}
+
+int __xstat64(int version, const char* path, struct stat64* buf) {
+    GENERATE_WRAPPER_BODY(sys_stat, __xstat64, int, version, path, buf);
 }
 
 int fstat(int fd, struct stat* buf) {
