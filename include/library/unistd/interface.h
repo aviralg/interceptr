@@ -10,9 +10,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(unistd, write)
         unistd, write, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(unistd, write)
-#define interceptr_set_wrapper_unistd_write(interceptr, write) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(       \
-        unistd, write, interceptr)
+#define interceptr_set_wrapper_unistd_write(interceptr, write_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(               \
+        unistd, write, interceptr, write_wrapper)
 
 /******************************************************************************/
 
@@ -22,8 +22,8 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(unistd, read)
         unistd, read, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(unistd, read)
-#define interceptr_set_wrapper_unistd_read(interceptr, read) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(     \
-        unistd, read, interceptr)
+#define interceptr_set_wrapper_unistd_read(interceptr, read_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(             \
+        unistd, read, interceptr, read_wrapper)
 
 #endif /* INTERCEPTR_LIBRARY_UNISTD_INTERFACE_H */

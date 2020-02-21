@@ -10,9 +10,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdlib, putenv)
         stdlib, putenv, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdlib, putenv)
-#define interceptr_set_wrapper_stdlib_putenv(interceptr, putenv) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(         \
-        stdlib, putenv, interceptr)
+#define interceptr_set_wrapper_stdlib_putenv(interceptr, putenv_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
+        stdlib, putenv, interceptr, putenv_wrapper)
 
 /******************************************************************************/
 
@@ -22,9 +22,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdlib, getenv)
         stdlib, getenv, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdlib, getenv)
-#define interceptr_set_wrapper_stdlib_getenv(interceptr, getenv) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(         \
-        stdlib, getenv, interceptr)
+#define interceptr_set_wrapper_stdlib_getenv(interceptr, getenv_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
+        stdlib, getenv, interceptr, getenv_wrapper)
 
 /******************************************************************************/
 
@@ -34,9 +34,10 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdlib, secure_getenv)
         stdlib, secure_getenv, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdlib, secure_getenv)
-#define interceptr_set_wrapper_stdlib_secure_getenv(interceptr, secure_getenv) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                       \
-        stdlib, secure_getenv, interceptr)
+#define interceptr_set_wrapper_stdlib_secure_getenv(interceptr,            \
+                                                    secure_getenv_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                   \
+        stdlib, secure_getenv, interceptr, secure_getenv_wrapper)
 
 /******************************************************************************/
 
@@ -46,9 +47,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdlib, clearenv)
         stdlib, clearenv, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdlib, clearenv)
-#define interceptr_set_wrapper_stdlib_clearenv(interceptr, clearenv) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(             \
-        stdlib, clearenv, interceptr)
+#define interceptr_set_wrapper_stdlib_clearenv(interceptr, clearenv_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                     \
+        stdlib, clearenv, interceptr, clearenv_wrapper)
 
 /******************************************************************************/
 
@@ -58,9 +59,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdlib, setenv)
         stdlib, setenv, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdlib, setenv)
-#define interceptr_set_wrapper_stdlib_setenv(interceptr, setenv) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(         \
-        stdlib, setenv, interceptr)
+#define interceptr_set_wrapper_stdlib_setenv(interceptr, setenv_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
+        stdlib, setenv, interceptr, setenv_wrapper)
 
 /******************************************************************************/
 
@@ -70,8 +71,8 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdlib, unsetenv)
         stdlib, unsetenv, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdlib, unsetenv)
-#define interceptr_set_wrapper_stdlib_unsetenv(interceptr, unsetenv) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(             \
-        stdlib, unsetenv, interceptr)
+#define interceptr_set_wrapper_stdlib_unsetenv(interceptr, unsetenv_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                     \
+        stdlib, unsetenv, interceptr, unsetenv_wrapper)
 
 #endif /* INTERCEPTR_LIBRARY_STDLIB_INTERFACE_H */

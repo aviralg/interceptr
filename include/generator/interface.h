@@ -34,10 +34,11 @@ struct interceptr_t;
         return interceptr;                                              \
     }
 
-#define INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
-    libname, funname, interceptr)                                            \
-    (interceptr_set_wrapper_##libname##_##funname                            \
-         ? interceptr_set_wrapper_##libname##_##funname(interceptr, funname) \
+#define INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
+    libname, funname, interceptr, wrapper_name)                       \
+    (interceptr_set_wrapper_##libname##_##funname                     \
+         ? interceptr_set_wrapper_##libname##_##funname(interceptr,   \
+                                                        wrapper_name) \
          : NULL)
 
 #endif /* INTERCEPTR_GENERATOR_INTERFACE_H */

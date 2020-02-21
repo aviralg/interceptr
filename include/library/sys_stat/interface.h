@@ -10,9 +10,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, stat)
         sys_stat, stat, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, stat)
-#define interceptr_set_wrapper_sys_stat_stat(interceptr, stat) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(       \
-        sys_stat, stat, interceptr)
+#define interceptr_set_wrapper_sys_stat_stat(interceptr, stat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(               \
+        sys_stat, stat, interceptr, stat_wrapper)
 
 /******************************************************************************/
 
@@ -22,9 +22,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, fstat)
         sys_stat, fstat, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, fstat)
-#define interceptr_set_wrapper_sys_stat_fstat(interceptr, fstat) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(         \
-        sys_stat, fstat, interceptr)
+#define interceptr_set_wrapper_sys_stat_fstat(interceptr, fstat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
+        sys_stat, fstat, interceptr, fstat_wrapper)
 
 /******************************************************************************/
 
@@ -34,9 +34,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, fstatat)
         sys_stat, fstatat, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, fstatat)
-#define interceptr_set_wrapper_sys_stat_fstatat(interceptr, fstatat) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(             \
-        sys_stat, fstatat, interceptr)
+#define interceptr_set_wrapper_sys_stat_fstatat(interceptr, fstatat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                     \
+        sys_stat, fstatat, interceptr, fstatat_wrapper)
 
 /******************************************************************************/
 
@@ -46,9 +46,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, lstat)
         sys_stat, lstat, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, lstat)
-#define interceptr_set_wrapper_sys_stat_lstat(interceptr, lstat) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(         \
-        sys_stat, lstat, interceptr)
+#define interceptr_set_wrapper_sys_stat_lstat(interceptr, lstat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
+        sys_stat, lstat, interceptr, lstat_wrapper)
 
 /******************************************************************************/
 
@@ -58,9 +58,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, chmod)
         sys_stat, chmod, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, chmod)
-#define interceptr_set_wrapper_sys_stat_chmod(interceptr, chmod) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(         \
-        sys_stat, chmod, interceptr)
+#define interceptr_set_wrapper_sys_stat_chmod(interceptr, chmod_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
+        sys_stat, chmod, interceptr, chmod_wrapper)
 
 /******************************************************************************/
 
@@ -70,9 +70,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, fchmod)
         sys_stat, fchmod, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, fchmod)
-#define interceptr_set_wrapper_sys_stat_fchmod(interceptr, fchmod) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(           \
-        sys_stat, fchmod, interceptr)
+#define interceptr_set_wrapper_sys_stat_fchmod(interceptr, fchmod_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                   \
+        sys_stat, fchmod, interceptr, fchmod_wrapper)
 
 /******************************************************************************/
 
@@ -82,9 +82,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, fchmodat)
         sys_stat, fchmodat, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, fchmodat)
-#define interceptr_set_wrapper_sys_stat_fchmodat(interceptr, fchmodat) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(               \
-        sys_stat, fchmodat, interceptr)
+#define interceptr_set_wrapper_sys_stat_fchmodat(interceptr, fchmodat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                       \
+        sys_stat, fchmodat, interceptr, fchmodat_wrapper)
 
 /******************************************************************************/
 
@@ -94,9 +94,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, mkdir)
         sys_stat, mkdir, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, mkdir)
-#define interceptr_set_wrapper_sys_stat_mkdir(interceptr, mkdir) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(         \
-        sys_stat, mkdir, interceptr)
+#define interceptr_set_wrapper_sys_stat_mkdir(interceptr, mkdir_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
+        sys_stat, mkdir, interceptr, mkdir_wrapper)
 
 /******************************************************************************/
 
@@ -106,9 +106,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, mkdirat)
         sys_stat, mkdirat, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, mkdirat)
-#define interceptr_set_wrapper_sys_stat_mkdirat(interceptr, mkdirat) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(             \
-        sys_stat, mkdirat, interceptr)
+#define interceptr_set_wrapper_sys_stat_mkdirat(interceptr, mkdirat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                     \
+        sys_stat, mkdirat, interceptr, mkdirat_wrapper)
 
 /******************************************************************************/
 
@@ -118,9 +118,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, mknod)
         sys_stat, mknod, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, mknod)
-#define interceptr_set_wrapper_sys_stat_mknod(interceptr, mknod) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(         \
-        sys_stat, mknod, interceptr)
+#define interceptr_set_wrapper_sys_stat_mknod(interceptr, mknod_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
+        sys_stat, mknod, interceptr, mknod_wrapper)
 
 /******************************************************************************/
 
@@ -130,9 +130,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, mknodat)
         sys_stat, mknodat, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, mknodat)
-#define interceptr_set_wrapper_sys_stat_mknodat(interceptr, mknodat) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(             \
-        sys_stat, mknodat, interceptr)
+#define interceptr_set_wrapper_sys_stat_mknodat(interceptr, mknodat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                     \
+        sys_stat, mknodat, interceptr, mknodat_wrapper)
 
 /******************************************************************************/
 
@@ -142,9 +142,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, mkfifo)
         sys_stat, mkfifo, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, mkfifo)
-#define interceptr_set_wrapper_sys_stat_mkfifo(interceptr, mkfifo) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(           \
-        sys_stat, mkfifo, interceptr)
+#define interceptr_set_wrapper_sys_stat_mkfifo(interceptr, mkfifo_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                   \
+        sys_stat, mkfifo, interceptr, mkfifo_wrapper)
 
 /******************************************************************************/
 
@@ -154,9 +154,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, mkfifoat)
         sys_stat, mkfifoat, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, mkfifoat)
-#define interceptr_set_wrapper_sys_stat_mkfifoat(interceptr, mkfifoat) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(               \
-        sys_stat, mkfifoat, interceptr)
+#define interceptr_set_wrapper_sys_stat_mkfifoat(interceptr, mkfifoat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                       \
+        sys_stat, mkfifoat, interceptr, mkfifoat_wrapper)
 
 /******************************************************************************/
 
@@ -166,9 +166,10 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, utimensat)
         sys_stat, utimensat, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, utimensat)
-#define interceptr_set_wrapper_sys_stat_utimensat(interceptr, utimensat) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
-        sys_stat, utimensat, interceptr)
+#define interceptr_set_wrapper_sys_stat_utimensat(interceptr,        \
+                                                  utimensat_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(             \
+        sys_stat, utimensat, interceptr, utimensat_wrapper)
 
 /******************************************************************************/
 
@@ -178,9 +179,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, futimens)
         sys_stat, futimens, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, futimens)
-#define interceptr_set_wrapper_sys_stat_futimens(interceptr, futimens) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(               \
-        sys_stat, futimens, interceptr)
+#define interceptr_set_wrapper_sys_stat_futimens(interceptr, futimens_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                       \
+        sys_stat, futimens, interceptr, futimens_wrapper)
 
 /******************************************************************************/
 
@@ -190,8 +191,8 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(sys_stat, umask)
         sys_stat, umask, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(sys_stat, umask)
-#define interceptr_set_wrapper_sys_stat_umask(interceptr, umask) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(         \
-        sys_stat, umask, interceptr)
+#define interceptr_set_wrapper_sys_stat_umask(interceptr, umask_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                 \
+        sys_stat, umask, interceptr, umask_wrapper)
 
 #endif /* INTERCEPTR_LIBRARY_SYS_STAT_INTERFACE_H */

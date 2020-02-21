@@ -10,9 +10,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, remove)
         stdio, remove, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, remove)
-#define interceptr_set_wrapper_stdio_remove(interceptr, remove) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, remove, interceptr)
+#define interceptr_set_wrapper_stdio_remove(interceptr, remove_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, remove, interceptr, remove_wrapper)
 
 /******************************************************************************/
 
@@ -22,9 +22,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, rename)
         stdio, rename, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, rename)
-#define interceptr_set_wrapper_stdio_rename(interceptr, rename) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, rename, interceptr)
+#define interceptr_set_wrapper_stdio_rename(interceptr, rename_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, rename, interceptr, rename_wrapper)
 
 /******************************************************************************/
 
@@ -34,9 +34,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, tmpfile)
         stdio, tmpfile, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, tmpfile)
-#define interceptr_set_wrapper_stdio_tmpfile(interceptr, tmpfile) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, tmpfile, interceptr)
+#define interceptr_set_wrapper_stdio_tmpfile(interceptr, tmpfile_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, tmpfile, interceptr, tmpfile_wrapper)
 
 /******************************************************************************/
 
@@ -46,9 +46,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, tmpnam)
         stdio, tmpnam, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, tmpnam)
-#define interceptr_set_wrapper_stdio_tmpnam(interceptr, tmpnam) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, tmpnam, interceptr)
+#define interceptr_set_wrapper_stdio_tmpnam(interceptr, tmpnam_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, tmpnam, interceptr, tmpnam_wrapper)
 
 /******************************************************************************/
 
@@ -58,9 +58,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fclose)
         stdio, fclose, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fclose)
-#define interceptr_set_wrapper_stdio_fclose(interceptr, fclose) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, fclose, interceptr)
+#define interceptr_set_wrapper_stdio_fclose(interceptr, fclose_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, fclose, interceptr, fclose_wrapper)
 
 /******************************************************************************/
 
@@ -70,9 +70,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fflush)
         stdio, fflush, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fflush)
-#define interceptr_set_wrapper_stdio_fflush(interceptr, fflush) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, fflush, interceptr)
+#define interceptr_set_wrapper_stdio_fflush(interceptr, fflush_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, fflush, interceptr, fflush_wrapper)
 
 /******************************************************************************/
 
@@ -82,9 +82,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fopen)
         stdio, fopen, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fopen)
-#define interceptr_set_wrapper_stdio_fopen(interceptr, fopen) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(      \
-        stdio, fopen, interceptr)
+#define interceptr_set_wrapper_stdio_fopen(interceptr, fopen_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
+        stdio, fopen, interceptr, fopen_wrapper)
 
 /******************************************************************************/
 
@@ -94,9 +94,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, freopen)
         stdio, freopen, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, freopen)
-#define interceptr_set_wrapper_stdio_freopen(interceptr, freopen) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, freopen, interceptr)
+#define interceptr_set_wrapper_stdio_freopen(interceptr, freopen_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, freopen, interceptr, freopen_wrapper)
 
 /******************************************************************************/
 
@@ -106,9 +106,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, setbuf)
         stdio, setbuf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, setbuf)
-#define interceptr_set_wrapper_stdio_setbuf(interceptr, setbuf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, setbuf, interceptr)
+#define interceptr_set_wrapper_stdio_setbuf(interceptr, setbuf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, setbuf, interceptr, setbuf_wrapper)
 
 /******************************************************************************/
 
@@ -118,9 +118,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, setvbuf)
         stdio, setvbuf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, setvbuf)
-#define interceptr_set_wrapper_stdio_setvbuf(interceptr, setvbuf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, setvbuf, interceptr)
+#define interceptr_set_wrapper_stdio_setvbuf(interceptr, setvbuf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, setvbuf, interceptr, setvbuf_wrapper)
 
 /******************************************************************************/
 
@@ -130,9 +130,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fprintf)
         stdio, fprintf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fprintf)
-#define interceptr_set_wrapper_stdio_fprintf(interceptr, fprintf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, fprintf, interceptr)
+#define interceptr_set_wrapper_stdio_fprintf(interceptr, fprintf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, fprintf, interceptr, fprintf_wrapper)
 
 /******************************************************************************/
 
@@ -142,9 +142,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fscanf)
         stdio, fscanf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fscanf)
-#define interceptr_set_wrapper_stdio_fscanf(interceptr, fscanf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, fscanf, interceptr)
+#define interceptr_set_wrapper_stdio_fscanf(interceptr, fscanf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, fscanf, interceptr, fscanf_wrapper)
 
 /******************************************************************************/
 
@@ -154,9 +154,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, printf)
         stdio, printf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, printf)
-#define interceptr_set_wrapper_stdio_printf(interceptr, printf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, printf, interceptr)
+#define interceptr_set_wrapper_stdio_printf(interceptr, printf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, printf, interceptr, printf_wrapper)
 
 /******************************************************************************/
 
@@ -166,9 +166,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, scanf)
         stdio, scanf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, scanf)
-#define interceptr_set_wrapper_stdio_scanf(interceptr, scanf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(      \
-        stdio, scanf, interceptr)
+#define interceptr_set_wrapper_stdio_scanf(interceptr, scanf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
+        stdio, scanf, interceptr, scanf_wrapper)
 
 /******************************************************************************/
 
@@ -178,9 +178,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, snprintf)
         stdio, snprintf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, snprintf)
-#define interceptr_set_wrapper_stdio_snprintf(interceptr, snprintf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(            \
-        stdio, snprintf, interceptr)
+#define interceptr_set_wrapper_stdio_snprintf(interceptr, snprintf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                    \
+        stdio, snprintf, interceptr, snprintf_wrapper)
 
 /******************************************************************************/
 
@@ -190,9 +190,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, sprintf)
         stdio, sprintf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, sprintf)
-#define interceptr_set_wrapper_stdio_sprintf(interceptr, sprintf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, sprintf, interceptr)
+#define interceptr_set_wrapper_stdio_sprintf(interceptr, sprintf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, sprintf, interceptr, sprintf_wrapper)
 
 /******************************************************************************/
 
@@ -202,9 +202,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, sscanf)
         stdio, sscanf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, sscanf)
-#define interceptr_set_wrapper_stdio_sscanf(interceptr, sscanf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, sscanf, interceptr)
+#define interceptr_set_wrapper_stdio_sscanf(interceptr, sscanf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, sscanf, interceptr, sscanf_wrapper)
 
 /******************************************************************************/
 
@@ -214,9 +214,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, vfprintf)
         stdio, vfprintf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, vfprintf)
-#define interceptr_set_wrapper_stdio_vfprintf(interceptr, vfprintf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(            \
-        stdio, vfprintf, interceptr)
+#define interceptr_set_wrapper_stdio_vfprintf(interceptr, vfprintf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                    \
+        stdio, vfprintf, interceptr, vfprintf_wrapper)
 
 /******************************************************************************/
 
@@ -226,9 +226,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, vfscanf)
         stdio, vfscanf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, vfscanf)
-#define interceptr_set_wrapper_stdio_vfscanf(interceptr, vfscanf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, vfscanf, interceptr)
+#define interceptr_set_wrapper_stdio_vfscanf(interceptr, vfscanf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, vfscanf, interceptr, vfscanf_wrapper)
 
 /******************************************************************************/
 
@@ -238,9 +238,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, vprintf)
         stdio, vprintf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, vprintf)
-#define interceptr_set_wrapper_stdio_vprintf(interceptr, vprintf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, vprintf, interceptr)
+#define interceptr_set_wrapper_stdio_vprintf(interceptr, vprintf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, vprintf, interceptr, vprintf_wrapper)
 
 /******************************************************************************/
 
@@ -250,8 +250,8 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, vscanf)
         stdio, vscanf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, vscanf)
-#define interceptr_set_wrapper_stdio_vscanf(interceptr, vscanf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
+#define interceptr_set_wrapper_stdio_vscanf(interceptr, vscanf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
         stdio, vscanf, interceptr)
 
 /******************************************************************************/
@@ -262,9 +262,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, vsnprintf)
         stdio, vsnprintf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, vsnprintf)
-#define interceptr_set_wrapper_stdio_vsnprintf(interceptr, vsnprintf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
-        stdio, vsnprintf, interceptr)
+#define interceptr_set_wrapper_stdio_vsnprintf(interceptr, vsnprintf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                      \
+        stdio, vsnprintf, interceptr, vsnprintf_wrapper)
 
 /******************************************************************************/
 
@@ -274,9 +274,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, vsprintf)
         stdio, vsprintf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, vsprintf)
-#define interceptr_set_wrapper_stdio_vsprintf(interceptr, vsprintf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(            \
-        stdio, vsprintf, interceptr)
+#define interceptr_set_wrapper_stdio_vsprintf(interceptr, vsprintf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                    \
+        stdio, vsprintf, interceptr, vsprintf_wrapper)
 
 /******************************************************************************/
 
@@ -286,9 +286,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, vsscanf)
         stdio, vsscanf, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, vsscanf)
-#define interceptr_set_wrapper_stdio_vsscanf(interceptr, vsscanf) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, vsscanf, interceptr)
+#define interceptr_set_wrapper_stdio_vsscanf(interceptr, vsscanf_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, vsscanf, interceptr, vsscanf_wrapper)
 
 /******************************************************************************/
 
@@ -298,9 +298,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fgetc)
         stdio, fgetc, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fgetc)
-#define interceptr_set_wrapper_stdio_fgetc(interceptr, fgetc) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(      \
-        stdio, fgetc, interceptr)
+#define interceptr_set_wrapper_stdio_fgetc(interceptr, fgetc_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
+        stdio, fgetc, interceptr, fgetc_wrapper)
 
 /******************************************************************************/
 
@@ -310,9 +310,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fgets)
         stdio, fgets, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fgets)
-#define interceptr_set_wrapper_stdio_fgets(interceptr, fgets) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(      \
-        stdio, fgets, interceptr)
+#define interceptr_set_wrapper_stdio_fgets(interceptr, fgets_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
+        stdio, fgets, interceptr, fgets_wrapper)
 
 /******************************************************************************/
 
@@ -322,9 +322,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fputc)
         stdio, fputc, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fputc)
-#define interceptr_set_wrapper_stdio_fputc(interceptr, fputc) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(      \
-        stdio, fputc, interceptr)
+#define interceptr_set_wrapper_stdio_fputc(interceptr, fputc_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
+        stdio, fputc, interceptr, fputc_wrapper)
 
 /******************************************************************************/
 
@@ -334,9 +334,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fputs)
         stdio, fputs, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fputs)
-#define interceptr_set_wrapper_stdio_fputs(interceptr, fputs) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(      \
-        stdio, fputs, interceptr)
+#define interceptr_set_wrapper_stdio_fputs(interceptr, fputs_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
+        stdio, fputs, interceptr, fputs_wrapper)
 
 /******************************************************************************/
 
@@ -345,8 +345,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, getc)
     INTERCEPTR_GENERATE_WRAPPER_GETTER_MACRO_DEFINITION(stdio, getc, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, getc)
-#define interceptr_set_wrapper_stdio_getc(interceptr, getc) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(stdio, getc, interceptr)
+#define interceptr_set_wrapper_stdio_getc(interceptr, getc_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(            \
+        stdio, getc, interceptr, getc_wrapper)
 
 /******************************************************************************/
 
@@ -356,9 +357,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, getchar)
         stdio, getchar, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, getchar)
-#define interceptr_set_wrapper_stdio_getchar(interceptr, getchar) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, getchar, interceptr)
+#define interceptr_set_wrapper_stdio_getchar(interceptr, getchar_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, getchar, interceptr, getchar_wrapper)
 
 /******************************************************************************/
 
@@ -367,8 +368,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, putc)
     INTERCEPTR_GENERATE_WRAPPER_GETTER_MACRO_DEFINITION(stdio, putc, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, putc)
-#define interceptr_set_wrapper_stdio_putc(interceptr, putc) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(stdio, putc, interceptr)
+#define interceptr_set_wrapper_stdio_putc(interceptr, putc_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(            \
+        stdio, putc, interceptr, putc_wrapper)
 
 /******************************************************************************/
 
@@ -378,9 +380,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, putchar)
         stdio, putchar, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, putchar)
-#define interceptr_set_wrapper_stdio_putchar(interceptr, putchar) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, putchar, interceptr)
+#define interceptr_set_wrapper_stdio_putchar(interceptr, putchar_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, putchar, interceptr, putchar_wrapper)
 
 /******************************************************************************/
 
@@ -389,8 +391,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, puts)
     INTERCEPTR_GENERATE_WRAPPER_GETTER_MACRO_DEFINITION(stdio, puts, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, puts)
-#define interceptr_set_wrapper_stdio_puts(interceptr, puts) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(stdio, puts, interceptr)
+#define interceptr_set_wrapper_stdio_puts(interceptr, puts_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(            \
+        stdio, puts, interceptr, puts_wrapper)
 
 /******************************************************************************/
 
@@ -400,9 +403,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, ungetc)
         stdio, ungetc, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, ungetc)
-#define interceptr_set_wrapper_stdio_ungetc(interceptr, ungetc) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, ungetc, interceptr)
+#define interceptr_set_wrapper_stdio_ungetc(interceptr, ungetc_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, ungetc, interceptr, ungetc_wrapper)
 
 /******************************************************************************/
 
@@ -412,9 +415,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fread)
         stdio, fread, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fread)
-#define interceptr_set_wrapper_stdio_fread(interceptr, fread) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(      \
-        stdio, fread, interceptr)
+#define interceptr_set_wrapper_stdio_fread(interceptr, fread_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
+        stdio, fread, interceptr, fread_wrapper)
 
 /******************************************************************************/
 
@@ -424,9 +427,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fwrite)
         stdio, fwrite, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fwrite)
-#define interceptr_set_wrapper_stdio_fwrite(interceptr, fwrite) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, fwrite, interceptr)
+#define interceptr_set_wrapper_stdio_fwrite(interceptr, fwrite_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, fwrite, interceptr, fwrite_wrapper)
 
 /******************************************************************************/
 
@@ -436,9 +439,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fgetpos)
         stdio, fgetpos, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fgetpos)
-#define interceptr_set_wrapper_stdio_fgetpos(interceptr, fgetpos) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, fgetpos, interceptr)
+#define interceptr_set_wrapper_stdio_fgetpos(interceptr, fgetpos_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, fgetpos, interceptr, fgetpos_wrapper)
 
 /******************************************************************************/
 
@@ -448,9 +451,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fseek)
         stdio, fseek, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fseek)
-#define interceptr_set_wrapper_stdio_fseek(interceptr, fseek) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(      \
-        stdio, fseek, interceptr)
+#define interceptr_set_wrapper_stdio_fseek(interceptr, fseek_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
+        stdio, fseek, interceptr, fseek_wrapper)
 
 /******************************************************************************/
 
@@ -460,9 +463,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, fsetpos)
         stdio, fsetpos, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, fsetpos)
-#define interceptr_set_wrapper_stdio_fsetpos(interceptr, fsetpos) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(          \
-        stdio, fsetpos, interceptr)
+#define interceptr_set_wrapper_stdio_fsetpos(interceptr, fsetpos_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                  \
+        stdio, fsetpos, interceptr, fsetpos_wrapper)
 
 /******************************************************************************/
 
@@ -472,9 +475,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, ftell)
         stdio, ftell, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, ftell)
-#define interceptr_set_wrapper_stdio_ftell(interceptr, ftell) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(      \
-        stdio, ftell, interceptr)
+#define interceptr_set_wrapper_stdio_ftell(interceptr, ftell_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(              \
+        stdio, ftell, interceptr, ftell_wrapper)
 
 /******************************************************************************/
 
@@ -484,9 +487,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, rewind)
         stdio, rewind, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, rewind)
-#define interceptr_set_wrapper_stdio_rewind(interceptr, rewind) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, rewind, interceptr)
+#define interceptr_set_wrapper_stdio_rewind(interceptr, rewind_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, rewind, interceptr, rewind_wrapper)
 
 /******************************************************************************/
 
@@ -496,9 +499,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, clearerr)
         stdio, clearerr, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, clearerr)
-#define interceptr_set_wrapper_stdio_clearerr(interceptr, clearerr) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(            \
-        stdio, clearerr, interceptr)
+#define interceptr_set_wrapper_stdio_clearerr(interceptr, clearerr_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                    \
+        stdio, clearerr, interceptr, clearerr_wrapper)
 
 /******************************************************************************/
 
@@ -507,8 +510,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, feof)
     INTERCEPTR_GENERATE_WRAPPER_GETTER_MACRO_DEFINITION(stdio, feof, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, feof)
-#define interceptr_set_wrapper_stdio_feof(interceptr, feof) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(stdio, feof, interceptr)
+#define interceptr_set_wrapper_stdio_feof(interceptr, feof_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(            \
+        stdio, feof, interceptr, feof_wrapper)
 
 /******************************************************************************/
 
@@ -518,9 +522,9 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, ferror)
         stdio, ferror, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, ferror)
-#define interceptr_set_wrapper_stdio_ferror(interceptr, ferror) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, ferror, interceptr)
+#define interceptr_set_wrapper_stdio_ferror(interceptr, ferror_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, ferror, interceptr, ferror_wrapper)
 
 /******************************************************************************/
 
@@ -530,8 +534,8 @@ INTERCEPTR_GENERATE_WRAPPER_GETTER_DECLARATION(stdio, perror)
         stdio, perror, interceptr)
 
 INTERCEPTR_GENERATE_WRAPPER_SETTER_DECLARATION(stdio, perror)
-#define interceptr_set_wrapper_stdio_perror(interceptr, perror) \
-    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(        \
-        stdio, perror, interceptr)
+#define interceptr_set_wrapper_stdio_perror(interceptr, perror_wrapper) \
+    INTERCEPTR_GENERATE_WRAPPER_SETTER_MACRO_DEFINITION(                \
+        stdio, perror, interceptr, perror_wrapper)
 
 #endif /* INTERCEPTR_LIBRARY_STDIO_INTERFACE_H */
